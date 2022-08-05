@@ -48,7 +48,7 @@ app.component('product-display',{
         data() {
             return {
                 product: 'Shoes',
-                brand: 'Se 331',
+                brand: 'SE 331',
                 // image: './assets/images/socks_green.jpg',
                 // inStock: false,
                 inventory: 100,

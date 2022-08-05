@@ -33,6 +33,13 @@ app.component('product-details',{
                         v-on:click="addToCart">
                         Add to Cart
                     </button>
+                    <button
+                        class="button"
+                        :class="{disabledButton:!inStock}"
+                        :disabled="!inStock"
+                        v-on:click="removeFromCart">
+                        Remove from Cart
+                    </button>
                 </div>
             </div>
         </div>` ,
@@ -58,6 +65,9 @@ app.component('product-details',{
             addToCart() {
                 // this.cart += 1
                 this.$emit('add-to-cart')
+            },
+            removeFromCart(){
+                this.$emit('remove-from-cart')
             },
             updateImage(variantImage) {
                 this.image = variantImage
